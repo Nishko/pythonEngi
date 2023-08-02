@@ -16,4 +16,16 @@ fB = np.array(
 # task 1C
 fC = np.concatenate((fA, fB), axis=0).T
 
-print(fC)
+# task 1D = 289
+fD = fC[(fC[:, 0] == 14)][:, 1:].sum()
+
+# task 1E = 443
+fE = fC[((fC[:, 0] >= 7) & (fC[:, 0] <= 18))][:, -1].sum()
+
+# task 1F =1163
+fF = fC[((fC[:, 0] >= 12) & (fC[:, 0] <= 18))][:, 1:].sum()
+
+
+print(fD)
+print(fE)
+print(fF)
